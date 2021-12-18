@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        document.writeln("1-november ver-1.4<br>");
+        document.writeln("1. Вычислить C=(M!+N!)/(M+1)! M и N – числа введенные с клавиатуры.<br>");
+        document.writeln("M! – это факториал числа, например, 5! = 1*2*3*4*5, это равно 120.<br>");
+        document.writeln("Факториал должен вычисляться с помощью функции.<br>");
+        document.writeln('<br>');
+
+        let m = 0;
+        let n = 0;
+        let c = 0;
+
+        m = prompt("Введите значение M", 3);
+        n = prompt("Введите значение N", 4);
+
+        c = Number(m) + 1;
+        c = factorial(c);
+        c = (factorial(m) + factorial(n)) / c;
+
+        document.writeln('<br>factorial(' + m + ') = ' + factorial(m));
+        document.writeln('<br>factorial(' + n + ') = ' + factorial(n));
+        document.writeln('<br>factorial(' + m + '  + 1) = ' + factorial(Number(m) + 1));
+        document.writeln('<br>C=(M!+N!)/(M+1)! = ' + c);
+
+        function factorial(val) {
+            let res = 1;
+            for (let i = 1; i <= val; i++) {
+                res = res * i;
+            }
+            return res;
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
